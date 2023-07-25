@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+namespace Starting
+{
+    class Intro
+    {
+        public static void Main()
+        {
+            List<int> myList = new List<int>(10) { 10, 20, 30, 40 };
+
+            //Adding the single element to list 
+            //myList.Add(50);//output 10,20,30,40,50
+
+            //Inserting the element in particular position 
+            myList.Insert(1, 800);
+
+            List<int> otherList = new List<int>() { 60, 70, 80 };
+
+            //Adding mutliple elements to previous list 
+            // myList.AddRange(otherList); //output 10,20,30,40,50, 60,70, 80
+
+            //Inserting mutliple elements in particular position 
+            myList.InsertRange(2, otherList);//10, 800,60,70,80,20,30,40
+
+            //using foreach 
+            foreach (int item in myList)
+            {
+                Console.WriteLine(item);
+            }
+
+            /*//using for loop
+            for (int i =0; i<myList.Count; i++)
+            {
+                Console.WriteLine(myList[i]);
+            }
+            */
+
+           
+          
+        }
+    }
+}
