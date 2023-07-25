@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+namespace Starting
+{
+    class Intro
+    {
+        public static void Main()
+        {
+            List<int> myList = new List<int>() { 10, 20, 30, 40, 50, 60 };
+            /*myList.Remove(20);// output 10,30,40,50,60
+            int d = 4;
+            if (d < myList.Count)
+            {
+                myList.RemoveAt(4); //output 10,30,40,50
+                Console.WriteLine("removed");
+            }*/
+
+            //removes range starts from index 1; count is 2 element
+            // myList.RemoveRange(3, 2); //output :10 20 30 60
+
+
+            //RemoveAll() removes all the elements that are matching with the given condition
+            //&& removes the elements greater than 30 
+
+            // myList.RemoveAll(n => n >= 30); output : 10,20
+
+            // clear()---> it will empty the entire list 
+            myList.Clear(); // after  clearing list also we can add element in list 
+            myList.Add(300);
+           foreach(var item in myList)
+            {
+                Console.WriteLine(item);
+            }
+          
+        }
+    }
+}
