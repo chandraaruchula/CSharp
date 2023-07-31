@@ -38,6 +38,16 @@ namespace Starting
                 Console.WriteLine(i);
             }
 
+         List<int> myList = new List<int>() { 10, 20, 30, 40, 60, 1, 5, 7 };
+        int lastfind = myList.FindLast(m => m < 10);
+        Console.WriteLine("finding the last element"+lastfind);// output 7
+        int lastfindindex= myList.FindLastIndex(m => m > 40);
+        Console.WriteLine("finding the last index of element"+  lastfindindex); //output 4
+        List <int> myList3= myList.FindAll(m => m < 10);
+        foreach(int i in myList3)
+        {
+            Console.WriteLine(i); //output 1,5,7
+        }
 
 
         }
