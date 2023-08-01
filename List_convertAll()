@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+ class Program
+{
+public static void Main()
+    {
+        //convertAll()method this method can convert eg int can be convert into string 
+        List<int> intcollection = new List<int>() { 1, 2, 3, 4 };
+        List <String> strcollection=intcollection.ConvertAll<String> ((n) =>
+        {
+            String word;
+           switch (n)
+            {
+                case 1: word = "one"; break;
+                case 2: word = "two"; break;
+                case 3: word = "three"; break;
+                case 4: word = "four"; break;
+                case 5: word = "five"; break;
+                case 6: word = "six"; break;
+                case 7: word = "seven"; break;
+                case 8: word = "eight"; break;
+                default: word = ""; break;
+
+        }
+            return word;
+
+        });
+
+        foreach(string item in strcollection)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
