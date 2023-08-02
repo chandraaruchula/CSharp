@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+ class Program
+{
+    public static void Main()
+    {
+        Dictionary<int, string> Employee = new Dictionary<int, string>()
+        {
+            {101,"mike" },
+            {102, "jack" },
+            {103, "cal" },
+            {104, "grace" }
+        };
+
+        //remove value and key 
+        //Employee.Remove(101);
+
+        foreach(KeyValuePair<int, string> kvp in Employee)
+        {
+            Console.WriteLine(kvp.Key + ","+  kvp.Value);
+        }
+
+        //get value based on key 
+        string s = Employee[101];
+        Console.WriteLine("\n value of 101 is "+s);
+
+        //To retrieve the only keys
+        Dictionary<int, string>.KeyCollection keys = Employee.Keys;
+        Console.WriteLine("keys are count here" + keys.Count);
+        Console.WriteLine("\n Keys");
+        foreach(int i in keys)
+        {
+            Console.WriteLine(i);
+        }
+
+        //  properties are count, [Tkey], keys, values
+        //methods https://www.tutorialsteacher.com/csharp/csharp-dictionary
+
+
+    }
+
+}
