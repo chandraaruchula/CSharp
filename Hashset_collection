@@ -1,0 +1,45 @@
+using System;
+class program
+{
+    public static void Main()
+    {
+        HashSet<string> message = new HashSet<string>()
+       {
+           "good morning",
+           "good luck",
+           "hello",
+           "have a great day",
+           "Cal",
+           "mike"
+
+       };
+        //Add element in hashset
+        message.Add("good evening");
+
+        //count the elements 
+        Console.WriteLine(message.Count);// output 7
+
+        foreach (var item in message)
+        {
+            Console.WriteLine("\n"+item);
+
+        }//output "good morning","good luck","hello","have a great day","Cal","mike"
+
+        Console.WriteLine("its shows the be hello is existing or not" + message.Contains("hello"));
+
+        //remove element 
+        message.Remove("Cal");
+
+        //removewhere 
+        Console.WriteLine(message.RemoveWhere(x => x.StartsWith("good")));
+
+        foreach (var item in message)
+        {
+            Console.WriteLine("\n"+item);
+
+        }
+
+
+
+    }
+}
