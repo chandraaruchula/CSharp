@@ -1,0 +1,53 @@
+using System.Collections;
+class Sample
+{
+    public int GetNumber()
+    {
+        return 10;
+    }
+
+    public double getanothernumber()
+    {
+        return 10.45;
+    }
+
+    public string GetMessage()
+    {
+        return "hello";
+    }
+    
+
+    public Employee GetEmployee()
+    {
+        return new Employee() { EmployeeName = "scot" };
+    }
+}
+    class Employee
+{
+    public string EmployeeName { set; get; }
+}
+class program
+    {
+        public static void Main()
+        {
+            ArrayList arraylist = new ArrayList() { "scott", 10 };
+            Sample s= new Sample();
+            arraylist.Add(s.GetEmployee());
+            arraylist.Add(s.GetNumber());
+            arraylist.Add(s.getanothernumber());
+            foreach(var item in arraylist)
+            {
+            if (item is Employee emp)
+            {
+                Console.WriteLine(emp.EmployeeName);
+            }
+            else
+            {
+                Console.WriteLine(item);
+            }
+            }
+
+        }
+
+    }
+
