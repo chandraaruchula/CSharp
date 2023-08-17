@@ -1,0 +1,29 @@
+class program
+{
+    public static void Main()
+    {
+        Queue<String> que= new Queue<String>();
+        // to add the element we use enqueue
+        que.Enqueue("Task1");
+        que.Enqueue("Task6");
+        que.Enqueue("Task8");
+        que.Enqueue("Task2");
+        que.Enqueue("Task3");
+        que.Enqueue("Task10");
+
+        //to remove the element we use dequeue
+       string h= que.Dequeue();
+        Console.WriteLine("\nthe remove from queue"+h);
+
+
+        //peek method used for return  element  its won't remove the element
+        string f = que.Peek();
+        Console.WriteLine("the return fifo element" + f);
+
+
+        foreach(string s in que)
+        {
+            Console.WriteLine(s);
+        }
+    }
+}
