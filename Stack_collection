@@ -1,0 +1,32 @@
+using System.Collections.Generic;
+class Student
+{
+    public int Marks { set; get; }
+    public int Rank { set; get; }
+}
+ class Program
+{
+    public static void Main()
+    {
+        Stack <Student> stack = new Stack<Student>();
+        //stack is lifo (last  in first out)
+        //Add elements
+        stack.Push(new Student() { Marks= 56 }) ;
+        stack.Push(new Student() { Marks = 89 });
+        stack.Push(new Student() { Marks = 67 });
+        //pop its will removes the element 
+        Student std= stack.Pop() ;
+        Console.WriteLine("the first element got removed from the stack" + std.Marks);
+        //peek is used to display the last element but it won't remove the element
+        //Student std = stack.Peek();
+
+        int r = 1;
+
+        foreach (Student student in stack)
+        {
+            student.Rank = r;
+            Console.WriteLine(student.Marks+","+student.Rank );
+            r++;
+        }
+    }
+}
